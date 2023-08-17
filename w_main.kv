@@ -1,0 +1,47 @@
+MDScreen:
+    name: 'main'
+    MDFloatLayout:
+        #orientation: 'vertical'
+        #size_hint:1,0.2
+        #pos_hint: {'center_x': 0.5,'center_y':0.5}
+       
+        MDIconButton:
+            icon: 'chevron-left'
+            #size_hint_y: 0.7
+            pos_hint : {'center_x': 0.05, 'center_y': 0.95}
+            on_release: app.gowelcome()
+            
+        MDLabel:
+            id: lyoum
+            text: "Controle D'abbsence"
+            #md_bg_color: 1,0,0,1
+            size_hint: 0.7,0.05
+            pos_hint : {'center_x': 0.5, 'top': 0.975}
+        
+        MDCard:
+            levitation: 10
+            pos_hint : {'center_x': 0.5, 'top': 0.9} 
+            size_hint_x:0.9 
+            size_hint_y:0.88
+            elevation:2
+            ScrollView:
+                id: tablescroll
+                
+                pos_hint : {'center_x': 0.95, 'top': 1} 
+                size_hint_x:0.5 
+                size_hint_y:0.9     
+                MDList:
+                    id:mlist        
+        
+    MDFlatButton:
+        id: saveb
+        text: 'Enregistrer'
+        size_hint: 0.9,None
+        pos_hint : {'center_x': 0.5, 'center_y': 0.06}
+        on_release: app.saveabsence()        
+    
+
+  
+
+    #MDTextField:
+    #    text:'enseignement'    

@@ -1,0 +1,85 @@
+MDScreen:
+    name: 'welcome' 
+    md_bg_color: '#ECF8F9'
+    
+    MDCard:
+        
+        md_bg_color: '#F3E99F'  #'#212A3E'
+        size_hint: 0.9,0.85
+        pos_hint: {'center_x':0.5 , 'center_y':0.5 }
+        elevation:2
+    Image:  
+        source: 'logo.png'
+        size_hint: 0.5,0.5
+        pos_hint:{'center_x': 0.5, 'center_y': 0.85}
+    
+    MDRoundFlatButton:
+        id: enter
+        text: 'Enter'  
+        size_hint: 0.3,0.06
+        pos_hint:{'center_x': 0.5, 'center_y': 0.15}  
+        md_bg_color: '#A6D0DD' #app.theme_cls.primary_color  # Set the background color to the primary color
+        line_color: '#A6D0DD'
+        text_color: '#212A3E'
+        on_release: app.screenmanage()
+ 
+    MDTextField:
+        id: comboens
+        hint_text: "Enseignement"
+        size_hint_x: 0.7
+        helper_text: 'Double Tape pour Choisir'
+        pos_hint : {'center_x': 0.5, 'top': 0.75}
+        multiline: False
+        icon_right: 'chevron-down'
+        color_mode: 'custom'
+        line_color_focus: '#C21010' 
+        line_color_normal: '#A6D0DD' 
+        text_color:'#A6D0DD' 
+        color_mode: 'accent'
+        on_double_tap: app.comboens()
+
+
+    MDTextField:
+        id: comboniv
+        hint_text: "Niveau"
+        size_hint_x: 0.7
+        helper_text: 'Double Tape pour Choisir'
+        pos_hint : {'center_x': 0.5, 'top': 0.65}
+        multiline: False
+        icon_right: 'chevron-down'
+        on_double_tap: app.comboniv()
+    MDTextField:
+        id: combofil
+        hint_text: "Filiere"
+        size_hint_x: 0.7
+        pos_hint : {'center_x': 0.5, 'top': 0.55}
+        multiline: False
+        icon_right: 'chevron-down'
+        on_double_tap: app.combofili()
+    MDTextField:
+        id: combocla
+        hint_text: "Classe"
+        size_hint_x: 0.7
+        pos_hint : {'center_x': 0.5, 'top': 0.45}
+        multiline: False
+        icon_right: 'chevron-down' 
+        on_double_tap: app.comboclas()           
+    MDTextField:
+        id: combogro
+        hint_text: "Groupe"
+        size_hint_x: 0.7
+        pos_hint : {'center_x': 0.5, 'top': 0.35}     
+        multiline: False
+        icon_right: 'chevron-down'
+        on_double_tap: app.combogrou()
+
+
+
+    MDRoundFlatIconButton:
+        id: iconconnect
+        text: "MDRectangleFlatIconButton"
+        icon: "autorenew"
+        text_color: 'green'
+        icon_color: 'green'
+        size_hint_x: 1
+        pos_hint: {'center_x': 0.5, 'center_y': 0.96}   
